@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Document</title>
+        <script
+            src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"
+        ></script>
+    </head>
+    <body>
+        <div class="wrapper">
+            <button onclick="num()">Spin</button>
+        </div>
+
+        <div class="random">
+            <p id="change">00</p>
+        </div>
+    </body>
+</html>
+
+<style>
+    body {
+        background: #dc218a;
+        color: #fff;
+        letter-spacing: 0.06em;
+        height: 96vh;
+        width: 99%;
+    }
+
+    .wrapper {
+        text-align: center;
+    }
+
+    button {
+        background-color: #fff;
+        font-size: 40px;
+        line-height: 1;
+        letter-spacing: 0.1em;
+        color: #000;
+        text-transform: uppercase;
+        padding: 12.5px 20px 10px 20px;
+        display: inline-block;
+        white-space: nowrap;
+        margin-right: -0.1em;
+        width: 153px;
+        position: relative;
+        text-align: center;
+        border: none;
+        margin: 6px 5px;
+        width: 300px;
+        padding: 12.5px 0 10px;
+    }
+
+    .random {
+        position: absolute;
+        left: 34%;
+        top: 30%;
+        text-align: center;
+    }
+
+    p {
+        font-size: 500px;
+        margin: 0;
+        line-height: 0.8;
+    }
+</style>
+
+<script src="js.js"></script>
