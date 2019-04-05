@@ -1,49 +1,28 @@
+// Generate an Array with 90 indexes (0-89)
+// let arr = Array.from(Array(90).keys())
 
-function ani() {
-
-    // Animate!
-    animationTimer = setInterval(function() {
-        
-       
-        if (
-            output.text().trim() === desired ||
-            new Date().getTime() - started > duration
-        ) {
-            clearInterval(animationTimer);
-        } else {
-            let formattedNumber = ("0" + Math.floor(Math.random() * 90 + 1)).slice(-2);
-            // Generate a random string to use for the next animation step
-            output.text(formattedNumber);
-        }
-    }, 100);
-}
 
 function rollDice() {
   return new Promise((resolve, reject) => {
-    var output, started, duration, desired;
-    duration = 3000;
-    output = $("#change");
-    started = new Date().getTime();
+    var duration = 3000;
+    var output = $("#change");
+    var started = new Date().getTime();
     
-
-
     const intervalId = setInterval(() => {
-        if (
-            output.text().trim() === desired ||
-            new Date().getTime() - started > duration
-        ) {
-            clearInterval(intervalId);
+        let formattedNumber = ("0" + Math.floor(Math.random() * 90 + 1)).slice(-2);
+
+        if ( new Date().getTime() - started < duration ) {
+            output.text(formattedNumber);  // Changes dom text
         } else {
-            let formattedNumber = ("0" + Math.floor(Math.random() * 90 + 1)).slice(-2);
-            // Generate a random string to use for the next animation step
-            output.text(formattedNumber);
+            clearInterval(intervalId);  // Stops the interval
+            output.text(formattedNumber);  // Changes dom text
             resolve(formattedNumber);
         }
     }, 100)
   })
 }
 
- function num() {
-    rollDice().then(value => console.log(`${value}`))
-    
- }
+function num() {
+    rollDice()
+    .then(value => console.log(`${value}`))
+}
