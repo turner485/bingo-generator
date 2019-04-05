@@ -5,7 +5,7 @@ for (let i = 1; i < 91; i++) {
     arr.push(i); //Example, pushing 5 integers in an array
 }
 
-function bingo() {
+function spin() {
     return new Promise((resolve, reject) => {
         let duration = 100;
         let output = $("#change");
@@ -31,4 +31,6 @@ function bingo() {
     });
 }
 
-console.log(arr);
+function bingo() {
+    $(".cell").css("font-size", "55px");
+}
