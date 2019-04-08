@@ -13,8 +13,7 @@
     </head>
     <body>
         <div class="wrapper">
-            <button onclick="bingo()">Spin</button>
-            <button onclick="order()">Bingo</button>
+            <button onclick="bingo(), remove()">Spin</button>
             <button onclick="location.reload()">restart</button>
         </div>
 
@@ -149,6 +148,12 @@
         text-align: center;
     }
 
+    .highlight {
+        color: red!important;
+        font-weight: 600;
+        font-size: 50px!important;
+    }
+
     button {
         background-color: #fff;
         font-size: 40px;
@@ -178,7 +183,7 @@
     }
 
     p#change {
-        font-size: 600px;
+        font-size: 300px;
         margin: 0;
         line-height: 1;
         display: block;
@@ -190,12 +195,19 @@
         font-size: 30px;
     }
 
+    .contain {
+        position: relative;
+        top: -45px;
+    }
+
     .contain table {
         margin: 0 auto;
     }
     .contain td {
-        font-size: 30px;
+        font-size: 25px;
         padding: 5px;
+        height: 60px;
+        width: 60px;
     }
 </style>
 

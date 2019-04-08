@@ -5,6 +5,8 @@ for (let i = 1; i < 91; i++) {
     arr.push(i); //Example, pushing 5 integers in an array
 }
 
+
+
 function bingo() {
     return new Promise((resolve, reject) => {
         let duration = 100;
@@ -23,12 +25,14 @@ function bingo() {
                 let index = arr.indexOf(arr[key]);
                 arr.splice(index, 1);
                 console.log(arr);
-                // $(".contain").append("<p>" + formattedNumber + "</p>");
-				$(".cell[data-cell='"+formattedNumber+"']").text(formattedNumber);
-
+				$(".cell[data-cell='"+formattedNumber+"']").text(formattedNumber).addClass("highlight");
             }
         }, 100);
     });
+}
+
+function remove() {
+    $(".cell").removeClass("highlight");   
 }
 
 console.log(arr);
