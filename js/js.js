@@ -5,7 +5,10 @@ for (let i = 1; i < 91; i++) {
     arr.push(i); //Example, pushing 5 integers in an array
 }
 
-function spin() {
+let y = []
+
+function getNumber() {
+
     return new Promise((resolve, reject) => {
         let duration = 100;
         let output = $("#change");
@@ -22,15 +25,20 @@ function spin() {
                 formattedNumber;
                 let index = arr.indexOf(arr[key]);
                 arr.splice(index, 1);
-                console.log(arr);
-                // $(".contain").append("<p>" + formattedNumber + "</p>");
-				$(".cell[data-cell='"+formattedNumber+"']").text(formattedNumber);
-
+                x = Number(formattedNumber);
+                y.push(x);
+                let z = y.slice(-2);
+                console.log(z);
+                if (z.length <= 1) {
+                     $(".cell[data-cell='"+ z[0] +"']").text(z[0]);
+                } else {
+                     $(".cell[data-cell='"+ z[0] +"']").text(z[0]).addClass("highlight");
+                }
             }
         }, 100);
     });
 }
 
-function bingo() {
-    $(".cell").css("font-size", "55px");
+function remove() {
+    $(".cell").removeClass("highlight");
 }
