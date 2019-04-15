@@ -1,0 +1,21 @@
+@mixin max($max) {
+    @media screen and (max-width: unquote($max + "px")) {
+        @content;
+    }
+}
+@mixin min($min) {
+    @media screen and (min-width: unquote($min + "px")) {
+        @content;
+    }
+}
+
+@mixin minmax($min, $max) {
+    @media screen and (min-width: unquote($min + "px")) and (max-width: unquote($max + "px")) {
+        @content;
+    }
+}
+
+@function get-vw-screen($target, $screen) {
+     $vw-context: ($screen*.01) * 1px;
+     @return ($target/$vw-context) * 1vw;
+}

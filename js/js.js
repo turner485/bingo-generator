@@ -10,7 +10,7 @@ let y = []
 function getNumber() {
 
     return new Promise((resolve, reject) => {
-        let duration = 100;
+        let duration = 1000;
         let output = $("#change");
         let started = new Date().getTime();
 
@@ -30,9 +30,10 @@ function getNumber() {
                 let z = y.slice(-2);
                 console.log(z);
                 if (z.length <= 1) {
-                     $(".cell[data-cell='"+ z[0] +"']").text(z[0]);
+                    return;
                 } else {
                      $(".cell[data-cell='"+ z[0] +"']").text(z[0]).addClass("highlight");
+                     $("#second").text(z[0]).addClass("highlight");
                 }
             }
         }, 100);

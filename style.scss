@@ -1,0 +1,104 @@
+@import "./mixins";
+
+body {
+    background: #fff;
+    color: #1a1a1a;
+    letter-spacing: 0.06em;
+    height: 96vh;
+    width: 99%;
+    font-family: "BrandonGrotesque-Bold", "Helvetica Neue", "Helvetica", "Arial",
+        sans-serif;
+
+    .highlight {
+        color: #d24d96 !important;
+        font-weight: 600;
+        font-size: 35px;
+    }
+
+    div.header {
+        img {
+            margin: 15px 0 0;
+        }
+
+        p {
+            font-size: 30px;
+            font-family: "BrandonGrotesque-Bold", "Helvetica Neue", "Helvetica",
+                "Arial", sans-serif;    
+            margin: 0;
+        }
+    }
+
+    div.buttons {
+        button {
+            background-color: #d24d96;
+            font-size: 15px;
+            line-height: 1.2;
+            letter-spacing: 0.08em;
+            color: #fff;
+            text-transform: uppercase;
+            white-space: nowrap;
+            text-align: center;
+            border: none;
+            margin: 15px 5px 10px;
+            width: 180px;
+            padding: 10px;
+            cursor: pointer;
+            font-family: "BrandonGrotesque-Regular", "Helvetica Neue",
+                "Helvetica", "Arial", sans-serif !important;
+            border-radius: 2px;
+        }
+    }
+
+    div.wrapper {
+        margin: 6pc 0 0 3pc;
+        p#change {
+            font-size: 300px;
+            margin: 0;
+            line-height: 0.9em;
+        }
+
+        div.line {
+            width: 70px;
+            border-bottom: 3px solid #d24d96;
+            margin: 0 auto;
+            padding-top: 6px;
+        }
+
+        p#second {
+            font-size: 300px;
+            line-height: 0.9;
+            color: #d24d96;
+        }
+
+        h3 {
+            margin: 10px 0 0;
+            font-size: 20px;
+        }
+    }
+
+    table {
+        width: 80%;
+        border: 1px solid #1a1a1a;
+        height: 100%;
+        margin: 1pc auto 0;
+
+        td {
+            font-size: 26px;
+            padding: 0px;
+            height: 55px;
+            width: 55px;
+            text-align: center;
+            p {
+                display: inline-block;
+                font-size: 30px;
+                margin: 0;
+            }
+        }
+    }
+
+    img.hare {
+        position: fixed;
+        bottom: 0;
+        left: 50%;
+    }
+}

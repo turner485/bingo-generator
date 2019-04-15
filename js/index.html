@@ -10,6 +10,7 @@
             integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
             crossorigin="anonymous"
         ></script>
+        <link rel="stylesheet" type="text/css" href="../style.css">
         <link
             rel="stylesheet"
             href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -19,218 +20,155 @@
     </head>
     <body>
         <div class="container-fluid">
+            <div class="row text-center header">
+                <div class="col-md-12">
+                    <img src="./images/logo.png" alt="joules">
+                    <p>Bingo!</p>
+                </div>
+            </div>
+            <div class="row text-center buttons">
+                <div class="col-md-12">
+                    <button onclick="getNumber(), remove()">Spin</button>
+                    <button onclick="location.reload()">restart</button>
+                </div>
+            </div>
             <div class="row">
-                <div class="col-sm-6">
-                    <div class="wrapper">
-                        <button onclick="getNumber(), remove()">Spin</button>
-                        <button onclick="location.reload()">restart</button>
+                <div class="col-md-12 col-lg-6">
+                    <div class="wrapper text-center">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h3>Current number</h3>
+                                <div class="line"></div>
+                                <p id="change">00</p>
+                            </div>
+                            <div class="col-md-6">
+                                <h3 class="prev">Previous number</h3>
+                                <div class="line"></div>
+                                <p id="second">--</p>
+                            </div>
+                            
+                        </div>
                     </div>
                 </div>
-                <div class="col-sm-6">
-                    <div class="big-number">
-                        <p id="change">00</p>
+                <div class="col-md-12 col-lg-6">
+                    <div class="row ">
+                        <div class="col-md-12">
+                            <table>
+                                <tr>
+                                    <td data-cell="1" class="cell">--</td>
+                                    <td data-cell="2" class="cell">--</td>
+                                    <td data-cell="3" class="cell">--</td>
+                                    <td data-cell="4" class="cell">--</td>
+                                    <td data-cell="5" class="cell">--</td>
+                                    <td data-cell="6" class="cell">--</td>
+                                    <td data-cell="7" class="cell">--</td>
+                                    <td data-cell="8" class="cell">--</td>
+                                    <td data-cell="9" class="cell">--</td>
+                                    <td data-cell="10" class="cell">--</td>
+                                </tr>
+                                <tr>
+                                    <td data-cell="11" class="cell">--</td>
+                                    <td data-cell="12" class="cell">--</td>
+                                    <td data-cell="13" class="cell">--</td>
+                                    <td data-cell="14" class="cell">--</td>
+                                    <td data-cell="15" class="cell">--</td>
+                                    <td data-cell="16" class="cell">--</td>
+                                    <td data-cell="17" class="cell">--</td>
+                                    <td data-cell="18" class="cell">--</td>
+                                    <td data-cell="19" class="cell">--</td>
+                                    <td data-cell="20" class="cell">--</td>
+                                </tr>
+                                <tr>
+                                    <td data-cell="21" class="cell">--</td>
+                                    <td data-cell="22" class="cell">--</td>
+                                    <td data-cell="23" class="cell">--</td>
+                                    <td data-cell="24" class="cell">--</td>
+                                    <td data-cell="25" class="cell">--</td>
+                                    <td data-cell="26" class="cell">--</td>
+                                    <td data-cell="27" class="cell">--</td>
+                                    <td data-cell="28" class="cell">--</td>
+                                    <td data-cell="29" class="cell">--</td>
+                                    <td data-cell="30" class="cell">--</td>
+                                </tr>
+                                <tr>
+                                    <td data-cell="31" class="cell">--</td>
+                                    <td data-cell="32" class="cell">--</td>
+                                    <td data-cell="33" class="cell">--</td>
+                                    <td data-cell="34" class="cell">--</td>
+                                    <td data-cell="35" class="cell">--</td>
+                                    <td data-cell="36" class="cell">--</td>
+                                    <td data-cell="37" class="cell">--</td>
+                                    <td data-cell="38" class="cell">--</td>
+                                    <td data-cell="39" class="cell">--</td>
+                                    <td data-cell="40" class="cell">--</td>
+                                </tr>
+                                <tr>
+                                    <td data-cell="41" class="cell">--</td>
+                                    <td data-cell="42" class="cell">--</td>
+                                    <td data-cell="43" class="cell">--</td>
+                                    <td data-cell="44" class="cell">--</td>
+                                    <td data-cell="45" class="cell">--</td>
+                                    <td data-cell="46" class="cell">--</td>
+                                    <td data-cell="47" class="cell">--</td>
+                                    <td data-cell="48" class="cell">--</td>
+                                    <td data-cell="49" class="cell">--</td>
+                                    <td data-cell="50" class="cell">--</td>
+                                </tr>
+                                <tr>
+                                    <td data-cell="51" class="cell">--</td>
+                                    <td data-cell="52" class="cell">--</td>
+                                    <td data-cell="53" class="cell">--</td>
+                                    <td data-cell="54" class="cell">--</td>
+                                    <td data-cell="55" class="cell">--</td>
+                                    <td data-cell="56" class="cell">--</td>
+                                    <td data-cell="57" class="cell">--</td>
+                                    <td data-cell="58" class="cell">--</td>
+                                    <td data-cell="59" class="cell">--</td>
+                                    <td data-cell="60" class="cell">--</td>
+                                </tr>
+                                <tr>
+                                    <td data-cell="61" class="cell">--</td>
+                                    <td data-cell="62" class="cell">--</td>
+                                    <td data-cell="63" class="cell">--</td>
+                                    <td data-cell="64" class="cell">--</td>
+                                    <td data-cell="65" class="cell">--</td>
+                                    <td data-cell="66" class="cell">--</td>
+                                    <td data-cell="67" class="cell">--</td>
+                                    <td data-cell="68" class="cell">--</td>
+                                    <td data-cell="69" class="cell">--</td>
+                                    <td data-cell="70" class="cell">--</td>
+                                </tr>
+                                <tr>
+                                    <td data-cell="71" class="cell">--</td>
+                                    <td data-cell="72" class="cell">--</td>
+                                    <td data-cell="73" class="cell">--</td>
+                                    <td data-cell="74" class="cell">--</td>
+                                    <td data-cell="75" class="cell">--</td>
+                                    <td data-cell="76" class="cell">--</td>
+                                    <td data-cell="77" class="cell">--</td>
+                                    <td data-cell="78" class="cell">--</td>
+                                    <td data-cell="79" class="cell">--</td>
+                                    <td data-cell="80" class="cell">--</td>
+                                </tr>
+                                <tr>
+                                    <td data-cell="81" class="cell">--</td>
+                                    <td data-cell="82" class="cell">--</td>
+                                    <td data-cell="83" class="cell">--</td>
+                                    <td data-cell="84" class="cell">--</td>
+                                    <td data-cell="85" class="cell">--</td>
+                                    <td data-cell="86" class="cell">--</td>
+                                    <td data-cell="87" class="cell">--</td>
+                                    <td data-cell="88" class="cell">--</td>
+                                    <td data-cell="89" class="cell">--</td>
+                                    <td data-cell="90" class="cell">--</td>
+                                </tr>
+                            </table>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="contain">
-                    <table>
-                        <tr>
-                            <td data-cell="1" class="cell">--</td>
-                            <td data-cell="2" class="cell">--</td>
-                            <td data-cell="3" class="cell">--</td>
-                            <td data-cell="4" class="cell">--</td>
-                            <td data-cell="5" class="cell">--</td>
-                            <td data-cell="6" class="cell">--</td>
-                            <td data-cell="7" class="cell">--</td>
-                            <td data-cell="8" class="cell">--</td>
-                            <td data-cell="9" class="cell">--</td>
-                            <td data-cell="10" class="cell">--</td>
-                        </tr>
-                        <tr>
-                            <td data-cell="11" class="cell">--</td>
-                            <td data-cell="12" class="cell">--</td>
-                            <td data-cell="13" class="cell">--</td>
-                            <td data-cell="14" class="cell">--</td>
-                            <td data-cell="15" class="cell">--</td>
-                            <td data-cell="16" class="cell">--</td>
-                            <td data-cell="17" class="cell">--</td>
-                            <td data-cell="18" class="cell">--</td>
-                            <td data-cell="19" class="cell">--</td>
-                            <td data-cell="20" class="cell">--</td>
-                        </tr>
-                        <tr>
-                            <td data-cell="21" class="cell">--</td>
-                            <td data-cell="22" class="cell">--</td>
-                            <td data-cell="23" class="cell">--</td>
-                            <td data-cell="24" class="cell">--</td>
-                            <td data-cell="25" class="cell">--</td>
-                            <td data-cell="26" class="cell">--</td>
-                            <td data-cell="27" class="cell">--</td>
-                            <td data-cell="28" class="cell">--</td>
-                            <td data-cell="29" class="cell">--</td>
-                            <td data-cell="30" class="cell">--</td>
-                        </tr>
-                        <tr>
-                            <td data-cell="31" class="cell">--</td>
-                            <td data-cell="32" class="cell">--</td>
-                            <td data-cell="33" class="cell">--</td>
-                            <td data-cell="34" class="cell">--</td>
-                            <td data-cell="35" class="cell">--</td>
-                            <td data-cell="36" class="cell">--</td>
-                            <td data-cell="37" class="cell">--</td>
-                            <td data-cell="38" class="cell">--</td>
-                            <td data-cell="39" class="cell">--</td>
-                            <td data-cell="40" class="cell">--</td>
-                        </tr>
-                        <tr>
-                            <td data-cell="41" class="cell">--</td>
-                            <td data-cell="42" class="cell">--</td>
-                            <td data-cell="43" class="cell">--</td>
-                            <td data-cell="44" class="cell">--</td>
-                            <td data-cell="45" class="cell">--</td>
-                            <td data-cell="46" class="cell">--</td>
-                            <td data-cell="47" class="cell">--</td>
-                            <td data-cell="48" class="cell">--</td>
-                            <td data-cell="49" class="cell">--</td>
-                            <td data-cell="50" class="cell">--</td>
-                        </tr>
-                        <tr>
-                            <td data-cell="51" class="cell">--</td>
-                            <td data-cell="52" class="cell">--</td>
-                            <td data-cell="53" class="cell">--</td>
-                            <td data-cell="54" class="cell">--</td>
-                            <td data-cell="55" class="cell">--</td>
-                            <td data-cell="56" class="cell">--</td>
-                            <td data-cell="57" class="cell">--</td>
-                            <td data-cell="58" class="cell">--</td>
-                            <td data-cell="59" class="cell">--</td>
-                            <td data-cell="60" class="cell">--</td>
-                        </tr>
-                        <tr>
-                            <td data-cell="61" class="cell">--</td>
-                            <td data-cell="62" class="cell">--</td>
-                            <td data-cell="63" class="cell">--</td>
-                            <td data-cell="64" class="cell">--</td>
-                            <td data-cell="65" class="cell">--</td>
-                            <td data-cell="66" class="cell">--</td>
-                            <td data-cell="67" class="cell">--</td>
-                            <td data-cell="68" class="cell">--</td>
-                            <td data-cell="69" class="cell">--</td>
-                            <td data-cell="70" class="cell">--</td>
-                        </tr>
-                        <tr>
-                            <td data-cell="71" class="cell">--</td>
-                            <td data-cell="72" class="cell">--</td>
-                            <td data-cell="73" class="cell">--</td>
-                            <td data-cell="74" class="cell">--</td>
-                            <td data-cell="75" class="cell">--</td>
-                            <td data-cell="76" class="cell">--</td>
-                            <td data-cell="77" class="cell">--</td>
-                            <td data-cell="78" class="cell">--</td>
-                            <td data-cell="79" class="cell">--</td>
-                            <td data-cell="80" class="cell">--</td>
-                        </tr>
-                        <tr>
-                            <td data-cell="81" class="cell">--</td>
-                            <td data-cell="82" class="cell">--</td>
-                            <td data-cell="83" class="cell">--</td>
-                            <td data-cell="84" class="cell">--</td>
-                            <td data-cell="85" class="cell">--</td>
-                            <td data-cell="86" class="cell">--</td>
-                            <td data-cell="87" class="cell">--</td>
-                            <td data-cell="88" class="cell">--</td>
-                            <td data-cell="89" class="cell">--</td>
-                            <td data-cell="90" class="cell">--</td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
+                <img src="./images/joules.jpg" width="50" alt="" class="img-responsive hare">
         </div>
     </body>
 </html>
-
-<style lang="scss">
-    body {
-        background: #d24d96;
-        color: #fff;
-        letter-spacing: 0.06em;
-        height: 96vh;
-        width: 99%;
-        font-family: "BrandonGrotesque-Bold", "Helvetica Neue", "Helvetica",
-            "Arial", sans-serif;
-    }
-
-    .wrapper {
-        text-align: center;
-        width: 820px;
-        margin-left: 100px;
-    }
-
-    .highlight {
-        color: #2E2E2E !important;
-        font-weight: 600;
-        font-size: 40px !important;
-    }
-
-    button {
-        background-color: #fff;
-        font-size: 50px;
-        line-height: 1.2;
-        letter-spacing: 0.08em;
-        color: #000;
-        text-transform: uppercase;
-        white-space: nowrap;
-        text-align: center;
-        border: none;
-        margin: 15px 5px 0px;
-        width: 400px;
-        padding: 25px 25px;
-        cursor: pointer;
-        font-family: "BrandonGrotesque-Regular", "Helvetica Neue", "Helvetica",
-            "Arial", sans-serif !important;
-        border-radius: 2px;
-    }
-
-    button:first-child {
-        margin-top: 40px;
-    }
-
-    .big-number {
-        text-align: center;
-    }
-
-    p#change {
-        font-size: 400px;
-        margin: 0;
-        line-height: 1;
-        margin-right: 5pc;
-        position: relative;
-        top: -20px;
-    }
-
-    p {
-        padding: 0 5px;
-        display: inline-block;
-        font-size: 30px;
-    }
-
-    .contain table {
-        margin: 0 auto 0;
-        border: 1px solid #fff;
-        position: relative;
-        top: -40px;
-    }
-
-    .contain td {
-        font-size: 26px;
-        padding: 0px;
-        height: 60px;
-        width: 85px;
-        text-align: center;
-    }
-</style>
 
 <script src="js.js"></script>
