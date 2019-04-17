@@ -34,18 +34,24 @@ body {
   body div.wrapper {
     margin: 6pc 0 0 3pc; }
     body div.wrapper p#change {
-      font-size: 300px;
+      font-size: 250px;
       margin: 0;
       line-height: 0.9em; }
+      @media screen and (max-width: 1200px) {
+        body div.wrapper p#change {
+          font-size: 18.33333vw; } }
     body div.wrapper div.line {
       width: 70px;
       border-bottom: 3px solid #d24d96;
       margin: 0 auto;
       padding-top: 6px; }
     body div.wrapper p#second {
-      font-size: 300px;
+      font-size: 250px;
       line-height: 0.9;
       color: #d24d96; }
+      @media screen and (max-width: 1200px) {
+        body div.wrapper p#second {
+          font-size: 18.33333vw; } }
     body div.wrapper h3 {
       margin: 10px 0 0;
       font-size: 20px; }
@@ -55,7 +61,7 @@ body {
     height: 100%;
     margin: 1pc auto 0; }
     body table td {
-      font-size: 26px;
+      font-size: 22px;
       padding: 0px;
       height: 55px;
       width: 55px;
